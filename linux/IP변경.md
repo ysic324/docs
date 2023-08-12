@@ -1,6 +1,8 @@
 # IP 변경
 
-## 설정파일 수정
+## Ubuntu Linux
+
+#### 설정파일 수정
 ```sh
 sudo vi /etc/netplan/00-installer-config.yaml
 ```
@@ -22,7 +24,7 @@ network:
   version: 2
 ```
 
-## 변경사항 적용
+### 변경사항 적용
 ```sh
 sudo netplan apply
 ```

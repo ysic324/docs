@@ -1,5 +1,7 @@
 # swap disable
 
+## Ubuntu Linux
+
 #### swap off
 ```sh
 sudo swapoff -a
