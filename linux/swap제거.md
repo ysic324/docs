@@ -3,13 +3,13 @@
 ## Ubuntu Linux
 
 #### swap off
-```sh
+```shell
 sudo swapoff -a
 ```
 
 #### /etc/fstab swap mount 제거
 /swap.img 주석 처리
-```sh
+```shell
 sudo vi /etc/fstab
 ```
 ```text
@@ -27,7 +27,7 @@ sudo vi /etc/fstab
 ```
 
 확인 (MiB Swap 확인)
-```sh
+```shell
 top
 ```
 ```text
@@ -55,15 +55,16 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   7476.6 avail Mem
 * vm.swappiness=100 : 적극적으로 스왑 사용
 
 #### 임시 적용
-```sh
+```shell
 sudo sysctl vm.swappiness=0
 ```
 
 #### 영구 적용
-```sh
+```shell
 sudo vi /etc/sysctl.conf
 ```
 
+커널 파라미터 추가
 ```text
 ...
 ...
@@ -72,15 +73,20 @@ vm.swappiness=0
 ...
 ```
 
+재부팅하지 않고 sysctl 파라미터 적용
+```shell
+sudo sysctl -p
+```
+
 #### 적용 확인
-```sh
+```shell
 cat /proc/sys/vm/swappiness
 ```
 ```text
 0
 ```
 또는
-```sh
+```shell
 sysctl -a | grep swappiness
 ```
 ```

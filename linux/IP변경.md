@@ -3,7 +3,7 @@
 ## Ubuntu Linux
 
 #### 설정파일 수정
-```sh
+```shell
 sudo vi /etc/netplan/00-installer-config.yaml
 ```
 ```yaml
@@ -25,6 +25,6 @@ network:
 ```
 
 ### 변경사항 적용
-```sh
+```shell
 sudo netplan apply
 ```
